@@ -1,0 +1,25 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom CSS */
+@layer utilities {
+  .list-disc li::before {
+    @apply content-['•'] text-2xl leading-6 text-secondary mr-[5px]
+  }
+  .list-disc li::marker {
+    content: '';
+  }
+
+  .h2-title {
+    @apply w-full text-xl  text-secondary border-secondary bg-secondary/20 font-semibold mb-2 border-l-4 pl-3 py-1
+  }
+
+}
+
+/* TODO: print set margin: 0; enables the margin background color to be changed, but the margins are not automatically adjusted. */
+/* @media print {
+  @page {
+    margin: 0; 
+  }
+} */

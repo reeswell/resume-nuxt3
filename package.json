@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "vue-draggable-plus": "^0.3.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.41.4",
+    "@nuxt/devtools": "^0.8.5",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxtjs/tailwindcss": "^6.9.4",
+    "@vueuse/nuxt": "^10.5.0",
+    "daisyui": "^3.9.4",
+    "eslint": "^8.52.0",
+    "nuxt": "^3.8.0",
+    "typescript": "^5.2.2"
+  }
+}

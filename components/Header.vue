@@ -27,8 +27,8 @@ function handleToggleContentEditable() {
 </script>
 
 <template>
-  <header class="p-4 flex justify-between gap-4 w-full">
-    <div class="p-4 flex gap-4">
+  <header class="p-2 sm:p-4 flex justify-between w-full">
+    <div class="p-4 flex sm:gap-4 gap-2">
       <button class="btn" @click="handlePrint()">
         打印
       </button>

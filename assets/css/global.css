@@ -10,6 +10,9 @@
   .list-disc li::marker {
     content: '';
   }
+  .list-disc {
+    list-style-type: none;
+  }
 
   .h2-title {
     @apply w-full text-xl  text-secondary border-secondary bg-secondary/20 font-semibold mb-2 border-l-4 pl-3 py-1

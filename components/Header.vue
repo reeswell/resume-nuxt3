@@ -27,18 +27,19 @@ function handleToggleContentEditable() {
 </script>
 
 <template>
-  <header class="p-4 flex gap-4">
+  <header class="p-4 flex justify-between gap-4 w-full">
     <div class="p-4 flex gap-4">
       <button class="btn" @click="handlePrint()">
-        download
+        打印
       </button>
       <button id="toggle-contenteditable" class="btn" @click="handleToggleContentEditable">
-        {{ isContenteditable ? 'Save' : 'Edit' }}
+        {{ isContenteditable ? '保存' : '编辑' }}
       </button>
+      <Guided />
 
       <select v-model="colorMode.preference" class="select w-full max-w-xs border-primary  focus:outline-0">
         <option disabled selected>
-          Theme
+          主题
         </option>
         <option v-for="theme of themes" :key="theme">
           {{ theme }}

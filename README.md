@@ -9,8 +9,8 @@
 - [x] Double-click on the resume block to edit
 - [x] Long press on the title block to drag and drop to adjust the order
 - [x] Copy new block while editing
+- [x] guided tours
 - [ ] **I18n**
-- [ ] guided tours
 
 ## Local Setup
 

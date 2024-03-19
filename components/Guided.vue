@@ -1,8 +1,8 @@
 <template>
-  <button class="btn" onclick="my_modal_2.showModal()">
+  <button class="btn" onclick="guided_modal.showModal()">
     使用说明
   </button>
-  <dialog id="my_modal_2" class="modal">
+  <dialog id="guided_modal" class="modal">
     <div class="modal-box sm:max-w-5xl">
       <h3 class="font-bold text-lg">
         使用说明

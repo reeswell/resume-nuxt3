@@ -38,9 +38,6 @@ function handleToggleContentEditable() {
       <Guided />
 
       <select v-model="colorMode.preference" class="select w-full max-w-xs border-primary  focus:outline-0">
-        <option disabled value="">
-          主题
-        </option>
         <option v-for="theme of themes" :key="theme" :value="theme">
           {{ theme }}
         </option>

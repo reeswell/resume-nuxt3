@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { type UseDraggableReturn, VueDraggable } from 'vue-draggable-plus'
-import type { Resume } from '~/types'
 import { data } from '~/data/vue'
 import { Educations, Experiences, PersonalProjects, Skills } from '#components'
 
@@ -15,8 +14,7 @@ interface DraggableItem {
   name: DraggableComponent
   props: any
 }
-const resume = ref<Resume>(data)
-const { name, role } = resume.value.profile
+const { name, role } = data.profile
 useHead({ title: `${name}-${role}` })
 function handleBlur(evt: any) {
   // avoid click toggle-button bug
@@ -26,36 +24,36 @@ function handleBlur(evt: any) {
 }
 
 const el = ref<UseDraggableReturn>()
-const components = ref<DraggableItem[]>([
+const components = [
   {
     id: 1,
     name: Experiences,
     props: {
-      experiences: resume.value.experiences,
+      experiences: data.experiences,
     },
   },
   {
     id: 2,
     name: Skills,
     props: {
-      skills: resume.value.skills,
+      skills: data.skills,
     },
   },
   {
     id: 3,
     name: Educations,
     props: {
-      educations: resume.value.educations,
+      educations: data.educations,
     },
   },
   {
     id: 4,
     name: PersonalProjects,
     props: {
-      personalProjects: resume.value.personalProjects,
+      personalProjects: data.personalProjects,
     },
   },
-])
+]
 
 const mainEl = ref<HTMLElement>()
 function handleEdit() {
@@ -70,7 +68,7 @@ function handleEdit() {
   <div class="text-sm md:text-base print:text-base container mx-auto max-w-screen-xl text-left">
     <main id="resume-wrapper" ref="mainEl" :contenteditable="isContenteditable" class="flex flex-col  shadow-2xl print:shadow-none" @dblclick="handleEdit" @blur="handleBlur">
       <div class="content p-6 md:p-12 w-full print:p-0">
-        <Profile :profile="resume.profile" />
+        <Profile :profile="data.profile" />
         <div class="main-content">
           <VueDraggable
             ref="el"

@@ -1,8 +1,20 @@
+<script setup lang="ts">
+//  lazy load modal
+const modal = ref<HTMLDialogElement>()
+const showModal = ref(false)
+function handleClick() {
+  showModal.value = true
+  nextTick(() => {
+    modal.value?.showModal()
+  })
+}
+</script>
+
 <template>
-  <button class="btn" onclick="guided_modal.showModal()">
+  <button class="btn" @click="handleClick">
     使用说明
   </button>
-  <dialog id="guided_modal" class="modal">
+  <dialog v-if="showModal" ref="modal" class="modal">
     <div class="modal-box sm:max-w-5xl">
       <h3 class="font-bold text-lg">
         使用说明

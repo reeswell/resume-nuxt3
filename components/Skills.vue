@@ -11,7 +11,7 @@ const { skills } = defineProps<{
     <h2 class="h2-title" :class="isContenteditable ? '' : 'handle cursor-move'">
       专业技能
     </h2>
-    <div v-for="{ name, descriptions } in skills" :key="name" class=" mt-5">
+    <div v-for="{ name, descriptions } in skills" :key="name" class="mt-3">
       <header>
         <div class="md:flex md:items-center md:justify-between flex-wrap">
           <h3 class="text-l font-semibold mb-2">
@@ -19,7 +19,7 @@ const { skills } = defineProps<{
           </h3>
         </div>
       </header>
-      <div class="item-description py-2">
+      <div class="item-description py-1">
         <ul class="list-disc">
           <li v-for="description in descriptions" :key="description">
             {{ description }}

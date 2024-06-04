@@ -10,10 +10,7 @@ const { profile } = defineProps<{
   <header>
     <div class="relative">
       <div class="title-avatar text-center md:mr-8 md:absolute md:top-0 md:right-0">
-        <img
-          v-if="profile.photo" class="w-20 mb-6 inline md:block" :src="profile.photo"
-          :alt="profile.name"
-        >
+        <img v-if="profile.photo" class="w-20 mb-6 inline md:block" :src="profile.photo" :alt="profile.name">
       </div>
       <div class="basic-info text-center md:mx-auto">
         <div class="md:flex md:justify-center md:items-center">
@@ -24,19 +21,19 @@ const { profile } = defineProps<{
             {{ profile.role }}
           </h2>
         </div>
-        <ul class="link-list text-left flex justify-center mb-2 flex-wrap">
-          <li class="mr-5">
+        <ul class="link-list text-left gap-5 flex justify-center mb-2 flex-wrap">
+          <li class="flex justify-center items-center">
             <MaterialSymbolsLocationOnOutline class="inline-block p-1 text-2xl -mr-[6px]" /> {{
               profile.location }}
           </li>
-          <li class="mr-5">
+          <li class="flex justify-center items-center">
             <MaterialSymbolsAttachEmail class="inline-block mr-1" />{{ profile.email }}
           </li>
-          <li class="mr-5">
+          <li class="flex justify-center items-center">
             <MaterialSymbolsCall class="inline-block mr-[2px]" />{{ profile.phone }}
           </li>
-          <li class="mr-5">
-            {{ profile.birth }}
+          <li class="flex justify-center items-center">
+            <IconParkOutlineBirthdayCake class="inline-block mr-[2px]" /> {{ profile.birth }}
           </li>
         </ul>
         <ul class="link-list text-left flex justify-center first-line:text-left flex-wrap">

@@ -60,7 +60,7 @@ export interface Resume {
 
 export interface PersonalProject {
   name: string
-  github: string
+  github?: string
   description: string
   website?: string
   stars?: number

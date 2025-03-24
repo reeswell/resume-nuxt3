@@ -12,7 +12,7 @@ export const data: Resume = {
     socialAccounts: [
       {
         name: '博客',
-        link: 'https://ibbicode.gitbook.io/notes',
+        link: 'https://dynaxfy.com',
         icon: MdiBlogger,
       },
       {
